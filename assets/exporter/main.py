@@ -35,10 +35,7 @@ def handler(event, context):
 
     message = json.loads(event["Records"][0]["Sns"]["Message"])
 
-    if message["Event ID"].endswith(os.environ["RDS_EVENT_ID"]) and re.match(
-        "^rds:" + os.environ["DB_NAME"] + "-\d{4}-\d{2}-\d{2}-\d{2}-\d{2}$",
-        message["Source ID"],
-    ):
+    if message["Event ID"].endswith(os.environ["RDS_EVENT_ID"]):
         export_task_identifier = event["Records"][0]["Sns"]["MessageId"]
         account_id = boto3.client("sts").get_caller_identity()["Account"]
         response = boto3.client("rds").start_export_task(
