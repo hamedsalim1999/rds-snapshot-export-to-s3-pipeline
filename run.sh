@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt isntall jq -y 
+sudo apt install jq -y 
 
 echo "BucketName name is : "
 read BucketName
