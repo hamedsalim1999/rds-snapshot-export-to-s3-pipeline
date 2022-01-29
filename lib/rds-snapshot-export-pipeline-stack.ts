@@ -184,6 +184,7 @@ export class RdsSnapshotExportPipelineStack extends cdk.Stack {
       code: Code.fromAsset(path.join(__dirname, "/../assets/exporter/")),
       environment: {
         RDS_EVENT_ID: props.rdsEventId,
+        RDS_EVENT_ID_2: "RDS-EVENT-0042",
         DB_NAME: props.dbName,
         LOG_LEVEL: "INFO",
         SNAPSHOT_BUCKET_NAME: bucket.bucketName,
