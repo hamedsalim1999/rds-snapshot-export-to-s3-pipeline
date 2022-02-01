@@ -181,7 +181,7 @@ export class RdsSnapshotExportPipelineStack extends cdk.Stack {
       functionName: props.dbName + "-rds-snapshot-exporter",
       runtime: Runtime.PYTHON_3_8,
       handler: "main.handler",
-      code: Code.fromAsset(path.join(__dirname, "../assets/exporter/main.py")),
+      code: Code.fromAsset(path.join(__dirname, "../assets/exporter/")),
       environment: {
         RDS_EVENT_ID: props.rdsEventId,
         RDS_EVENT_ID_2: "RDS-EVENT-0042",
