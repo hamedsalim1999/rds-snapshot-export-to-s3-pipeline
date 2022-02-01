@@ -7,3 +7,4 @@ node_modules
 cdk.out
 data.json
 .vscode/settings.json
+src/data.json
