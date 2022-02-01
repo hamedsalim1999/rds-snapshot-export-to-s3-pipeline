@@ -7,7 +7,7 @@ read BucketName
 echo "DBName name is : "
 read DBName
 
-echo '{"s3BucketName": "'"$BucketName"'", "dbName": "'"$DBName"'"}' | jq > data.json
+echo '{"s3BucketName": "'"$BucketName"'", "dbName": "'"$DBName"'"}' | jq > src/data.json
 
 npm install
 npm run cdk bootstrap
