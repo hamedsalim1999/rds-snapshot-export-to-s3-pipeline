@@ -8,3 +8,11 @@ cdk.out
 data.json
 .vscode/settings.json
 src/data.json
+
+
+.vscode
+.github
+LICENSE
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+README.md
